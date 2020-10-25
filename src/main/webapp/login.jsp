@@ -27,7 +27,7 @@
 
 <c:choose>
     <%--     If the username submitted is "admin", and the password is "password",--%>
-    <c:when username="admmin" && password="password">
+    <c:when test="${username='admin' && password='password'}">
         <%--redirect the user to the profile page; otherwise, redirect back to the login form.--%>
     </c:when>
 
