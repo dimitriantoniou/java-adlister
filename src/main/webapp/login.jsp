@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: dimitriantoniou
@@ -23,6 +24,18 @@
 
     <input type="submit">
 </form>
+
+<c:choose>
+    <%--     If the username submitted is "admin", and the password is "password",--%>
+    <c:when username="admmin" && password="password">
+        <%--redirect the user to the profile page; otherwise, redirect back to the login form.--%>
+    </c:when>
+
+    <c:otherwise>
+        <%--otherwise, redirect back to the login form.--%>
+        </c:otherwise>
+
+    </c:choose>
 
 </body>
 </html>
