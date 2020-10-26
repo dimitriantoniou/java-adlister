@@ -18,6 +18,15 @@ In your jsp file, loop through all the ads and display each one.
 </head>
 <body>
 
+<%--
+
+@WebServlet(name = "HelloWorldServlet", urlPatterns = "/")
+public class HelloWorldServlet extends HttpServlet {
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+response.getWriter().println("<h1>Hello, World!</h1>");
+}
+}
+
 @WebServlet("/ads")
 public class ShowAdsServlet extends HttpServlet {
 @Override
@@ -28,6 +37,6 @@ List<Ad> ads = adsDao.all();
     request.getRequestDispatcher("/ads/index.jsp").forward(request, resp);
     }
     }
-
+--%>
 </body>
 </html>
